@@ -198,6 +198,8 @@
 // //   }  
 // // }
 
+
+
 // ***********************************************************************/
 // // let abcd = Object.values(friends);
 // // console.log(abcd);
@@ -239,12 +241,6 @@
 // //   }
 // // }
 
-// // for (let friend in friends) {
-// //   for (let features in friends[friend]) {
-// //     let ageFeature = friends[friend][features]
-// //     if (typeof ageFeature == 'number') {ageFeature = ageFeature +1};
-// //     console.log(ageFeature);
-// //   }
-// // }
+// 
 
  

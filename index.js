@@ -1,23 +1,22 @@
 // /*------------------
 
-
 // 1)
 // The loop is currently printing
 // the keys of the person object.
 // Switch it so it is printing
 // the values instead.
 // ------------------*/
-const person = {
-  name: "Sofia",
-  age: 30,
-  location: "Barcelona",
-  hairColor: "brown",
-  coder: true
-}
+// const person = {
+//   name: "Sofia",
+//   age: 30,
+//   location: "Barcelona",
+//   hairColor: "brown",
+//   coder: true
+// }
 
-for (let values in person) {
-  console.log(person[values]);
-}
+// for (let key in person) {
+//   console.log(person[key]);
+// }
 
 // /*------------------
 // 2)
@@ -31,11 +30,11 @@ for (let values in person) {
 //   animal: "dog",
 //   color: "brown",
 // }
-// for (let features in pet) {
-// //  console.log("pet features : ", pet[features]);
-// // console.log(`${features}: ${pet[features]}`)
-// console.log(`${pet[features]}`)
+
+// for (let key in pet) {
+//   console.log(`${pet[key]}`)
 // } 
+
 // /*------------------
 // 3)
 // Add at least FOUR properties
@@ -46,15 +45,23 @@ for (let values in person) {
 // to the console.
 // ------------------*/
 
-// // const car = {
-// //   brand: "Ford",
-// //   length: "3941",
-// //   built: "strong",
-// //   color: "red",
-// // }
-// // for (let features in car) {
-// // console.log(car[features]);
-// // }
+// const car = {
+//   brand: "Audi",
+//   type: "automatic",
+//   wheels: 4,
+//   color: "white",
+// };
+
+
+// car.brand = "Audi",
+// car.type = "automatic",
+// car.wheels = 4,
+// car.color = "white"
+// console.log(car)
+
+// for (let key in car) {
+// console.log(car[key]);
+// }
 
 // /*------------------
 // 4)
@@ -72,17 +79,22 @@ for (let values in person) {
 // Hint - For this step you'll need to check if we are on the last key and if so, treat it differently than we did in Bonus #1.  
 // ------------------*/
 
-// // let carFeatures = " "
+const car = {
+  brand: "Audi",
+  type: "automatic",
+  wheels: 4,
+  color: "white"
+};
 
-// // for (let features in car) {
-// //  carFeatures = (carFeatures + car[features] + "," + " ")
-// // console.log(`${carFeatures}.`);
-// // }
+let carFeatures = " "
 
-// // for (const key in address) {
-// //   if (address.line1.call(address, key)) {
-// //     const element = address[key];    
-// //   }
+for (let key in car) {
+//  carFeatures = (carFeatures + car[features] + "," + " ")
+let features = Object.values(car)
+   carFeatures = features.join(", ")
+console.log(carFeatures);
+}
+
 // /*------------------
 // 5)
 // Create a loop that adds each
@@ -109,6 +121,12 @@ for (let values in person) {
 // //     const element = address[key];    
 // //   }
 // // }
+
+// for (const key in address) {
+//   if (address.line1.call(address, key)) {
+//     const element = address[key];    
+//   }
+// }
 
 
 // /*------------------
@@ -167,6 +185,13 @@ for (let values in person) {
 // is, increase the value by 1.
 // ------------------*/
 
+// for (let friend in friends) {
+// //   for (let features in friends[friend]) {
+// //     let ageFeature = friends[friend][features]
+// //     if (typeof ageFeature == 'number') {ageFeature = ageFeature +1};
+// //     console.log(ageFeature);
+// //   }
+// // }
 
 // /*------------------
 // 9)
