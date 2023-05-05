@@ -153,7 +153,7 @@
 // }
 
 // /******************************************************************
-// Standard Code for lopping through any no of Objects using for..in
+// Standard Code for looping through any no of Objects using for..in
 // ******************************************************************/
 
 // const isObject = function(values) {
@@ -197,7 +197,6 @@
 // //     console.log(values, friends[values])
 // //   }  
 // // }
-
 
 
 // ***********************************************************************/

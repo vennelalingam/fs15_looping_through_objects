@@ -83,17 +83,35 @@ const car = {
   brand: "Audi",
   type: "automatic",
   wheels: 4,
-  color: "white"
+  color: "white",
+  owner: "Vennela",
+  year: 2012
 };
 
-let carFeatures = " "
+// 1. Accessing car object values into array
+// using built-in Object method.
+// 2. using .join() to convert array to string.
+// 3. concatenating using template literals.
+// 4. Finally check adding more propetries to the 
+// object and see if the code still runs.
 
-for (let key in car) {
-//  carFeatures = (carFeatures + car[features] + "," + " ")
-let features = Object.values(car)
-   carFeatures = features.join(", ")
-console.log(carFeatures);
-}
+let carFeatures = "The features of car are:  ";
+let carArray = Object.values(car);
+console.log(carArray)
+//['Audi', 'automatic', 4, 'white']
+let car_Features = carArray.join(", ");
+console.log(`${carFeatures}` + `${car_Features}.`);
+
+
+
+// let carFeatures = "The features of car are:  ";
+
+// for (let key in car) {
+//  carFeatures = (carFeatures + car[key] + ", ")
+// // let features = Object.values(car)
+// //    carFeatures = features.join(", ")
+// console.log(carFeatures);
+// }
 
 // /*------------------
 // 5)
@@ -102,19 +120,19 @@ console.log(carFeatures);
 // to the fullAddress string.
 // ------------------*/
 
-// // let address = {
-// //   line1: "Carrer de CodeOp",
-// //   line2: 42,
-// //   city: "Barcelona",
-// //   country: "Spain"
-// // }
+// let address = {
+//   line1: "Carrer de CodeOp",
+//   line2: 42,
+//   city: "Barcelona",
+//   country: "Spain"
+// }
 
-// // let fullAddress = " "
+// let fullAddress = " "
 
-// // for (let details in address){
-// //   fullAddress =(fullAddress + address[details] + "," + " ")
-// //  console.log(`${fullAddress}.`);
-// // }
+// for (let key in address){
+//   fullAddress =(key, address[key])
+//  console.log(fullAddress);
+// }
 
 // // for (const key in address) {
 // //   if (address.line1.call(address, key)) {
@@ -141,12 +159,13 @@ console.log(carFeatures);
 // to uppercase.
 // ------------------*/
 
-// const car = {
-//   brand: "ford",
-//   length: "3941",
-//   built: "strong",
-//   color: "red",
+// const cars = {
+//   brand: "fiat",
+//   number_plate: 3356,
+//   built: "manual",
+//   color: "blue"
 // }
+
 // for (let features in car) {
 // // console.log(car[features]);
 
