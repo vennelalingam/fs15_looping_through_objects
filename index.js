@@ -144,21 +144,21 @@
 // to the fullAddress string.
 // ------------------*/
 
-let address = {
-  line1: "Carrer de CodeOp",
-  line2: 42,
-  city: "Barcelona",
-  country: "Spain"
-}
+// let address = {
+//   line1: "Carrer de CodeOp",
+//   line2: 42,
+//   city: "Barcelona",
+//   country: "Spain"
+// }
 
-let fullAddress = "Full Address: ";
+// let fullAddress = "Full Address: ";
 
-let addressArray = [];
-console.log(addressArray)
-for(let key in address){
-  addressArray.push(address[key])
-}
-console.log(`${fullAddress} ${addressArray.join(", ")}.`)
+// let addressArray = [];
+// console.log(addressArray)
+// for(let key in address){
+//   addressArray.push(address[key])
+// }
+// console.log(`${fullAddress} ${addressArray.join(", ")}.`)
 
 // /*------------------
 // 6)
@@ -172,35 +172,27 @@ console.log(`${fullAddress} ${addressArray.join(", ")}.`)
 // to uppercase.
 // ------------------*/
 
-const cars = {
-  brand: "fiat",
-  number_plate: 3356,
-  built: "manual",
-  color: "blue"
-} 
+// const cars = {
+//   brand: "fiat",
+//   number_plate: 3356,
+//   built: "manual",
+//   color: "blue"
+// } 
 
-let carDetails = "";
+// let carDetails = "";
 
-for(let key in cars){
-  (typeof cars[key] === "string")
-  ? carDetails += cars[key].toUpperCase() + ", "
-  : carDetails += cars[key] + ", "
-}
-console.log(carDetails);
+// for(let key in cars){
+//   (typeof cars[key] === "string")
+//   ? carDetails += cars[key].toUpperCase() + ", "
+//   : carDetails += cars[key] + ", "
+// }
+// console.log(carDetails);
 
 // In case of Array
 // const arr = ["Microsoft", "Apple"]
 // const output = arr.map(str => str.toUpperCase());
 // console.log(output)
 
-
-// for (let features in car) {
-// // console.log(car[features]);
-
-//   typeof((car[features]) === "") ?
-//     console.log(car[features].toUpperCase()) : null
-//   // console.log(typeof(car[features]))
-// } 
 
 // /*------------------
 // 7)
@@ -215,9 +207,9 @@ console.log(carDetails);
 //   lucy: 27
 // }
 
-// for (let update in friendsAges){
-//  friendsAges[update] = friendsAges[update]+1 
-//   console.log(friendsAges[update]);
+// for (let key in friendsAges){
+//  let newAge = (friendsAges[key] += 1) 
+//   console.log(newAge);
 // }
 
 // /*------------------
@@ -232,13 +224,39 @@ console.log(carDetails);
 // is, increase the value by 1.
 // ------------------*/
 
-// for (let friend in friends) {
-// //   for (let features in friends[friend]) {
-// //     let ageFeature = friends[friend][features]
-// //     if (typeof ageFeature == 'number') {ageFeature = ageFeature +1};
-// //     console.log(ageFeature);
-// //   }
-// // }
+// const friends = {
+//   a: {
+//     name: "Pedro",
+//     relationship: "school",
+//     age: 30
+//   },
+//   b: {
+//     name: "Sofia",
+//     relationship: "work",
+//     age: 38
+//   },
+//   c: {
+//     name: "Mia",
+//     relationship: "school",
+//     age: 40
+//   },
+//   d: {
+//     name: "Lucy",
+//     relationship: "work",
+//     age: 27
+//   }
+// }
+
+for (let key in friends) {
+  for (let keys in friends[key]) {
+    let age = friends[key][keys]
+    if (typeof age === 'number') {
+      age += 1
+    } 
+      else null;
+    console.log(age);
+  }
+}
 
 // /*------------------
 // 9)
@@ -247,23 +265,46 @@ console.log(carDetails);
 // loop that populates the two strings.
 // ------------------*/
 
-// let workFriends = "";
-// let schoolFriends = "";
-// for (let friend in friends) {
-//   for (let features in friends[friend]) {
-//     let relationship = friends[friend][features]
-//     console.log(relationship)
-//     if(relationship === "work"){
-//       console.log(workFriends)
-//     } else console.log(schoolFriends)
-// //       ((relationship) === "work") ?
-// // //     //  else if (typeof workFriends == "school") {}
-// // //     // console.log(typeof(workFriends))
-// //      console.log({workFriends}) : console.log({schoolFriends})
-    
-//     // console.log(workFriends);
-//   }
-// }
+const friends = {
+  a: {
+    name: "Pedro",
+    relationship: "school",
+    age: 30
+  },
+  b: {
+    name: "Sofia",
+    relationship: "work",
+    age: 38
+  },
+  c: {
+    name: "Mia",
+    relationship: "school",
+    age: 40
+  },
+  d: {
+    name: "Lucy",
+    relationship: "work",
+    age: 27
+  }
+}
+
+let workFriends = "Work Friends: ";
+let schoolFriends = "School Friends: ";
+
+for(let key in friends){
+  for (let keys in friends[key]){
+    let value = friends[key][keys];
+    // console.log(value);
+
+    if (value === "work"){
+     console.log(workFriends, friends[key]["name"])
+    } else if (value === "school"){
+      console.log(schoolFriends, friends[key]["name"])
+    }
+  }
+}
+
+
 
 // // console.log(`The person's work friends are ${workFriends} and school friends are ${schoolFriends}.`)
 
@@ -281,25 +322,22 @@ console.log(carDetails);
 
 // ------------------*/
 
-// let chores = {
-//   tidying: "Monday",
-//   vaccuuming: "Monday",
-//   dishes: "Wednesday",
-//   laundry: "Wednesday",
-//   bills: "Monday",
-// }
-
-
-// for (let mondayChores in chores) {
-//  if(chores[mondayChores] === "Monday") {
-//   console.log("Monday's chores are: ", mondayChores);
-//  }
-// }
-
-// // let wednesdayChores = "";
-// // console.log(wednesdayChores)
-// for (let wednesdayChores in chores) {
-//   if(chores[wednesdayChores] === "Wednesday"){
-//   console.log("Wednesday's chores are: ", wednesdayChores);
-// }
-// }
+let chores = {
+  tidying: "Monday",
+  vaccuuming: "Monday",
+  dishes: "Wednesday",
+  laundry: "Wednesday",
+  bills: "Monday",
+}
+let mondayChores = []
+let wedChores = []
+for (let key in chores) {
+ if(chores[key] === "Monday") {
+  mondayChores.push(key);
+console.log("Monday's chores are:", mondayChores.join(", ") + ".");
+ } 
+ else if(chores[key] === "Wednesday"){
+  wedChores.push(key);
+  console.log("Wednesday's chores are: ", wedChores.join(", ") + ".");
+}
+}
