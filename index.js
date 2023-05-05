@@ -79,14 +79,14 @@
 // Hint - For this step you'll need to check if we are on the last key and if so, treat it differently than we did in Bonus #1.  
 // ------------------*/
 
-const car = {
-  brand: "Audi",
-  type: "automatic",
-  wheels: 4,
-  color: "white",
-  owner: "Vennela",
-  year: 2012
-};
+// const car = {
+//   brand: "Audi",
+//   type: "automatic",
+//   wheels: 4,
+//   color: "white",
+//   owner: "Vennela",
+//   year: 2012
+// };
 
 // 1. Accessing car object values into array
 // using built-in Object method.
@@ -102,20 +102,20 @@ const car = {
 // console.log(carArray)
 // //['Audi', 'automatic', 4, 'white']
 // let car_Features = carArray.join(", ");
-// console.log(`${carFeatures}` + `${car_Features}.`);
+// console.log(`${carFeatures} ${car_Features}.`);
 
 //*********** simplified solution ****************/
 
 // accessing values using for..in loop and .push values 
 // to an empty array to use .join() & concatenate
-  
-  let carFeatures = "The features of car are:  ";
-  let array = [];
 
- for(let key in car) {
-    array.push(car[key]);
- }
-console.log(carFeatures + array.join(", ") + ".");
+//   let carFeatures = "The features of car are: ";
+//   let array = [];
+
+//  for(let key in car) {
+//     array.push(car[key]);
+//  }
+// console.log(`${carFeatures} ${array.join(", ")}.`);
 
 //*********** alternative solution  **********/
 
@@ -137,41 +137,28 @@ console.log(carFeatures + array.join(", ") + ".");
 
 // console.log(carFeatures)
 
-
-// /*------------------
+// /*------------------------------------------------
 // 5)
 // Create a loop that adds each
 // component of the adddress object
 // to the fullAddress string.
 // ------------------*/
 
-// let address = {
-//   line1: "Carrer de CodeOp",
-//   line2: 42,
-//   city: "Barcelona",
-//   country: "Spain"
-// }
+let address = {
+  line1: "Carrer de CodeOp",
+  line2: 42,
+  city: "Barcelona",
+  country: "Spain"
+}
 
-// let fullAddress = "Full Address, ";
+let fullAddress = "Full Address: ";
 
-
-// for (let key in address){
-//   fullAddress =(key, address[key])
-//  console.log(fullAddress);
-// }
-
-// // for (const key in address) {
-// //   if (address.line1.call(address, key)) {
-// //     const element = address[key];    
-// //   }
-// // }
-
-// for (const key in address) {
-//   if (address.line1.call(address, key)) {
-//     const element = address[key];    
-//   }
-// }
-
+let addressArray = [];
+console.log(addressArray)
+for(let key in address){
+  addressArray.push(address[key])
+}
+console.log(`${fullAddress} ${addressArray.join(", ")}.`)
 
 // /*------------------
 // 6)
@@ -185,12 +172,27 @@ console.log(carFeatures + array.join(", ") + ".");
 // to uppercase.
 // ------------------*/
 
-// const cars = {
-//   brand: "fiat",
-//   number_plate: 3356,
-//   built: "manual",
-//   color: "blue"
-// }
+const cars = {
+  brand: "fiat",
+  number_plate: 3356,
+  built: "manual",
+  color: "blue"
+} 
+
+let carDetails = "";
+
+for(let key in cars){
+  (typeof cars[key] === "string")
+  ? carDetails += cars[key].toUpperCase() + ", "
+  : carDetails += cars[key] + ", "
+}
+console.log(carDetails);
+
+// In case of Array
+// const arr = ["Microsoft", "Apple"]
+// const output = arr.map(str => str.toUpperCase());
+// console.log(output)
+
 
 // for (let features in car) {
 // // console.log(car[features]);
