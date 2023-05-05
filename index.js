@@ -95,23 +95,48 @@ const car = {
 // 4. Finally check adding more propetries to the 
 // object and see if the code still runs.
 
-let carFeatures = "The features of car are:  ";
-let carArray = Object.values(car);
-console.log(carArray)
-//['Audi', 'automatic', 4, 'white']
-let car_Features = carArray.join(", ");
-console.log(`${carFeatures}` + `${car_Features}.`);
+//************* my Solution *******************/
 
+// let carFeatures = "The features of car are:  ";
+// let carArray = Object.values(car);
+// console.log(carArray)
+// //['Audi', 'automatic', 4, 'white']
+// let car_Features = carArray.join(", ");
+// console.log(`${carFeatures}` + `${car_Features}.`);
 
+//*********** simplified solution ****************/
+
+// accessing values using for..in loop and .push values 
+// to an empty array to use .join() & concatenate
+  
+  let carFeatures = "The features of car are:  ";
+  let array = [];
+
+ for(let key in car) {
+    array.push(car[key]);
+ }
+console.log(carFeatures + array.join(", ") + ".");
+
+//*********** alternative solution  **********/
+
+// 1. for...in loop to access values from car object.
+// 2. Accessed keys of the car object into array
+// 3. to check last item of array to concatenate with "."
 
 // let carFeatures = "The features of car are:  ";
 
+// let carAray = Object.keys(car)
+// console.log(carAray)
+// // ['brand', 'type', 'wheels', 'color', 'owner', 'year']
 // for (let key in car) {
-//  carFeatures = (carFeatures + car[key] + ", ")
-// // let features = Object.values(car)
-// //    carFeatures = features.join(", ")
-// console.log(carFeatures);
+//   // Ternary Expression
+//   (carAray[carAray.length - 1] === key)
+//   ? carFeatures += car[key] + "."
+//   : carFeatures += car[key] + ", "
 // }
+
+// console.log(carFeatures)
+
 
 // /*------------------
 // 5)
@@ -127,7 +152,8 @@ console.log(`${carFeatures}` + `${car_Features}.`);
 //   country: "Spain"
 // }
 
-// let fullAddress = " "
+// let fullAddress = "Full Address, ";
+
 
 // for (let key in address){
 //   fullAddress =(key, address[key])
